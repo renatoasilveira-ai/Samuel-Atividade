@@ -1,0 +1,80 @@
+body {
+    background-color: wheat;
+    text-align: center;
+}
+
+.titulo {
+    background-color: rgb(247, 163, 125);
+    color: brown;
+    font-size: 100px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgb(247, 163, 125);;   /* Cria a borda */
+    display: inline-block;     /* Faz a borda colar no texto */
+    padding: 5px 10px;         /* Opcional: dá um respiro entre o texto e a borda */
+    border-radius: 10px;
+} 
+
+img {
+    text-align: center;
+}
+
+.paragrafo {
+    font-size: 30px;
+    font-weight: bold;
+    color:brown
+}
+
+.text1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Remove as bolinhas da lista, limpa o espaço que o navegador cria e centraliza */
+
+.text1 ul {
+    list-style-type: none; /* Remove as bolinhas */
+    padding: 0;            /* Remove o espaço invisível da esquerda */
+    margin: 0;
+}
+
+/* Faz os links ficarem lado a lado e dá um espaço entre eles */
+
+.text1 li {
+    display: inline-block; /* Coloca os itens na mesma linha */
+    margin: 0 20px;        /* Dá um espaçamento gostoso entre as opções do menu */
+}
+
+/* Opcional: estiliza os links para ficarem mais bonitos */
+
+.text1 a {
+   /* text-decoration: none; /* Remove o sublinhado padrão */
+    color: cadetblue;           /* Muda a cor do texto */
+    font-weight: bold;     /* Deixa em negrito (como você aprendeu!) */
+}
+
+.text2 {
+    background-color: rgb(247, 163, 125);
+    color: brown;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    margin: 30px;
+    border: 2px solid rgb(247, 163, 125);;   /* Cria a borda */
+    padding: 5px 10px;         /* Opcional: dá um respiro entre o texto e a borda */
+    border-radius: 10px;
+}
+
+.bolo {
+    color: brown;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    margin: 30px;
+    border: 5px solid rgb(247, 163, 125);;   /* Cria a borda */
+    display: inline-block;     /* Faz a borda colar no texto */
+    padding: 5px 10px;         /* Opcional: dá um respiro entre o texto e a borda */
+    border-radius: 10px;   
+}
