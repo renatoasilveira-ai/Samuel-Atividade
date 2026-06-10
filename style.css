@@ -1,80 +1,258 @@
-body {
-    background-color: wheat;
-    text-align: center;
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.titulo {
-    background-color: rgb(247, 163, 125);
-    color: brown;
-    font-size: 100px;
-    font-weight: bold;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid rgb(247, 163, 125);;   /* Cria a borda */
-    display: inline-block;     /* Faz a borda colar no texto */
-    padding: 5px 10px;         /* Opcional: dá um respiro entre o texto e a borda */
-    border-radius: 10px;
-} 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf8f2; /* Bege bem clarinho e confortável */
+    color: #4a3b32; /* Marrom escuro para melhor leitura */
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o site na tela */
+}
 
-img {
+/* Cabeçalho */
+.titulo {
     text-align: center;
+    color: #8b4513; /* Marrom quente */
+    font-size: 2.5rem;
+    margin-top: 20px;
 }
 
 .paragrafo {
-    font-size: 30px;
-    font-weight: bold;
-    color:brown
-}
-
-.text1 {
     text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+    color: #6e5d53;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
-/* Remove as bolinhas da lista, limpa o espaço que o navegador cria e centraliza */
-
+/* Menu de Navegação */
 .text1 ul {
-    list-style-type: none; /* Remove as bolinhas */
-    padding: 0;            /* Remove o espaço invisível da esquerda */
-    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #8b4513;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
-
-/* Faz os links ficarem lado a lado e dá um espaço entre eles */
 
 .text1 li {
-    display: inline-block; /* Coloca os itens na mesma linha */
-    margin: 0 20px;        /* Dá um espaçamento gostoso entre as opções do menu */
+    margin: 0 15px;
 }
-
-/* Opcional: estiliza os links para ficarem mais bonitos */
 
 .text1 a {
-   /* text-decoration: none; /* Remove o sublinhado padrão */
-    color: cadetblue;           /* Muda a cor do texto */
-    font-weight: bold;     /* Deixa em negrito (como você aprendeu!) */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+.text1 a:hover {
+    color: #ffda79; /* Efeito ao passar o mouse */
+}
+
+/* Seção do Bolo (Destaque) */
 .text2 {
-    background-color: rgb(247, 163, 125);
-    color: brown;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 30px;
-    margin: 30px;
-    border: 2px solid rgb(247, 163, 125);;   /* Cria a borda */
-    padding: 5px 10px;         /* Opcional: dá um respiro entre o texto e a borda */
-    border-radius: 10px;
+    color: #a0522d;
+    border-bottom: 2px solid #e6ccb2;
+    padding-bottom: 5px;
+    margin: 30px 0 15px 0;
 }
 
 .bolo {
-    color: brown;
-    font-size: 40px;
+    font-size: 2rem;
+    color: #4a2c11;
+    margin-bottom: 15px;
+}
+
+/* Imagem Responsiva */
+img {
+    max-width: 100%;
+    height: auto !important; /* Sobrescreve o height fixo do HTML para não distorcer */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Listas (Ingredientes e Modo de Preparo) */
+.lista, ol {
+    background-color: #ffffff;
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.lista li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Botão "Ver mais receitas" */
+.btn-ver-mais {
+    display: inline-block;
+    background-color: #d2691e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
     font-weight: bold;
+    text-align: center;
+    margin: 30px auto;
+    display: table; /* Centraliza o botão */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-ver-mais:hover {
+    background-color: #b25310;
+    transform: translateY(-2px);
+}
+
+.cabecalho-receita {
+    background-color: #ffffff; 
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    text-align: center; 
+    margin-bottom: 25px; 
+    border-left: 5px solid #8b4513; 
+}
+
+.cabecalho-receita .bolo {
+    font-size: 2.2rem;
+    color: #4a2c11;
+    margin-bottom: 8px; 
+}
+
+.cabecalho-receita .descricao-receita {
+    font-size: 1.1rem;
+    color: #6e5d53;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+/* ==========================================================================
+   Estilo do Formulário de Comentários
+   ========================================================================== */
+
+.container-formulario {
+    background-color: #ffffff;
     padding: 30px;
-    margin: 30px;
-    border: 5px solid rgb(247, 163, 125);;   /* Cria a borda */
-    display: inline-block;     /* Faz a borda colar no texto */
-    padding: 5px 10px;         /* Opcional: dá um respiro entre o texto e a borda */
-    border-radius: 10px;   
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 35px;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Coloca o rótulo acima do campo */
+}
+
+.campo-grupo label {
+    font-weight: bold;
+    color: #4a3b32;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Estilo para Inputs, Selects e Textareas */
+.campo-grupo input[type="text"],
+.campo-grupo select,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e6ccb2;
+    border-radius: 8px;
+    background-color: #fcf8f2;
+    color: #4a3b32;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito de foco (quando o usuário clica para digitar) */
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: #8b4513; /* Muda para o marrom principal */
+    background-color: #ffffff;
+}
+
+/* Remove a permissão de deformar o layout ao esticar a caixa de texto */
+.campo-grupo textarea {
+    resize: vertical;
+}
+
+/* Botão de Enviar exclusivo do Formulário */
+.btn-enviar {
+    background-color: #8b4513;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%; /* Ocupa a largura total no mobile */
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #4a2c11;
+}
+
+/* Ajuste para telas maiores (computador) */
+@media (min-width: 600px) {
+    .btn-enviar {
+        width: auto; /* No PC, o botão fica do tamanho do texto */
+        float: right; /* Alinha o botão à direita */
+    }
+    /* Limpa o float para não quebrar os elementos seguintes */
+    .container-formulario::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* ==========================================================================
+   Estilo do Rodapé
+   ========================================================================== */
+
+.rodape-pagina {
+    background-color: #4a3b32; /* Marrom escuro para dar contraste com o fundo claro */
+    color: #fcf8f2; /* Letras clarinhas para leitura confortável */
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px 12px 0 0; /* Arredonda apenas as pontas de cima */
+    margin-top: 50px; /* Garante um bom espaço após o botão */
+}
+
+.autor-box p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.autor-box strong {
+    color: #ffda79; /* Cor de destaque amarelada para o nome da vovó */
+}
+
+.divisor-rodape {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.3), rgba(255,255,255,0));
+    margin: 15px 0;
+}
+
+.direitos {
+    font-size: 0.85rem;
+    opacity: 0.8; /* Deixa o texto do copyright ligeiramente mais discreto */
 }

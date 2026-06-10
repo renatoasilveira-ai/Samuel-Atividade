@@ -20,22 +20,23 @@
             </ul>
         </nav>
 
-    <h2 class="text2">Receita em Destaque</h2>
+  <h2 class="text2">Receita em Destaque</h2>
 
+<header class="cabecalho-receita">
     <h1 class="bolo">Bolo de Chocolate</h1>
+    <p class="descricao-receita">Um bolo fofinho, molhadinho e muito fácil de fazer no liquidificador!</p>
+</header>
 
-    <img 
+<img 
     src="https://renata.com.br/images/receitas/680/renata-imagem-receitas-bolo-de-chocolate-simples-e-facil-de-liquidificador-1-sm.jpg"
     alt="delicioso bolo de chocolate" 
-    height=300
+    height="300"
     width="500"
-    >
-
-    <p class="paragrafo">Um bolo fofinho e fácil de fazer</p>
+>
     
     <h2 class="text2">Ingredientes</h2>
 
-    <ul>
+    <ul class="lista">
         <li>Farinha</li>
         <li>Açucar</li>
         <li>Farinha</li>
@@ -56,7 +57,50 @@
             <li>Leve ao forno por cerca de 35 a 40 minutos.</li>
         </ol>
 
+        <h2 class="text2">Deixe sua Avaliação</h2>
+    
+    <div class="container-formulario">
+        <form action="#" method="POST" class="form-comentario">
+            
+            <div class="campo-grupo">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="avaliacao">O que achou da receita?</label>
+                <select id="avaliacao" name="avaliacao" required>
+                    <option value="" disabled selected>Escolha uma nota...</option>
+                    <option value="5">⭐⭐⭐⭐⭐ (Excelente! Amei)</option>
+                    <option value="4">⭐⭐⭐⭐ (Muito Boa)</option>
+                    <option value="3">⭐⭐⭐ (Gostosa / Normal)</option>
+                    <option value="2">⭐⭐ (Pode melhorar)</option>
+                    <option value="1">⭐ (Não gostei)</option>
+                </select>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="mensagem">Seu Comentário ou Sugestão:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte para nós como ficou o seu bolo..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Comentário</button>
+        </form>
+    </div>
+
     <a href="https://www.tudogostoso.com.br/"target="_blank">ver mais receitas</a>
+        
+<!-- Repare que ele entra logo após o botão "Ver mais receitas" -->
+    <a href="https://www.tudogostoso.com.br/" target="_blank" class="btn-ver-mais">Ver mais receitas</a>
+
+    <!-- INÍCIO DO RODAPÉ -->
+    <footer class="rodape-pagina">
+        <div class="autor-box">
+            <p>Receita compartilhada por <strong>Vovó Renata</strong></p>
+        </div>
+        <hr class="divisor-rodape">
+        <p class="direitos">&copy; 2026 Receitas da Vovó. Todos os direitos reservados.</p>
+    </footer>
         
 </body>
 </html>
